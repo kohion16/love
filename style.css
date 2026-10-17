@@ -265,24 +265,3 @@ h1, .page-title {
     -80px 350px rgba(255,255,255,0.10);
 }
 
-/* Keep the message card above the hearts */
-.message {
-  position: relative;
-  z-index: 1;
-}
-
-body::after {
-  content: "♡  ♥  ♡  ♥  ♡";
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  color: white;
-  font-size: 40px;
-  opacity: 0.6;
-  z-index: 9999;
-  pointer-events: none;
-}
-
-body {
-  background: red !important;
-}
