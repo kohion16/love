@@ -282,3 +282,7 @@ body::after {
   z-index: 9999;
   pointer-events: none;
 }
+
+body {
+  background: red !important;
+}
