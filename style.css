@@ -216,52 +216,45 @@ h1, .page-title {
   *, *::before, *::after { transition: none !important; }
 }
 
-/* Soft white hearts behind the Past, Present and Future messages */
+
+/* Scattered translucent hearts behind each letter */
 .destination {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
 }
 
-.destination::before,
-.destination::after {
-  content: "♥";
-  position: fixed;
-  pointer-events: none;
-  z-index: 0;
-  color: rgba(255, 255, 255, 0.22);
-  line-height: 1;
-}
-
-/* Smaller hearts scattered around the background */
 .destination::before {
-  top: 8%;
-  left: 7%;
-  font-size: 20px;
-  text-shadow:
-    130px 120px rgba(255,255,255,0.18),
-    280px 35px rgba(255,255,255,0.12),
-    420px 210px rgba(255,255,255,0.20),
-    610px 70px rgba(255,255,255,0.15),
-    760px 260px rgba(255,255,255,0.18),
-    920px 100px rgba(255,255,255,0.12),
-    1050px 330px rgba(255,255,255,0.17),
-    190px 420px rgba(255,255,255,0.15),
-    520px 520px rgba(255,255,255,0.18),
-    850px 570px rgba(255,255,255,0.13);
+  content:
+    "♡                         ♡"
+    "\A"
+    "       ♡             ♡"
+    "\A"
+    " ♡                 ♡       ♡"
+    "\A"
+    "           ♡"
+    "\A"
+    "  ♡             ♡             ♡"
+    "\A"
+    "                ♡          ♡"
+    "\A"
+    " ♡                         ♡";
+  white-space: pre;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: clamp(18px, 2.5vw, 34px);
+  line-height: 2.8;
+  letter-spacing: 1.5vw;
+  color: rgba(255, 255, 255, 0.17);
+  pointer-events: none;
+  z-index: -1;
 }
 
-/* Larger, fainter hearts */
-.destination::after {
-  top: 22%;
-  left: 15%;
-  font-size: 38px;
-  color: rgba(255, 255, 255, 0.10);
-  text-shadow:
-    240px 180px rgba(255,255,255,0.10),
-    500px -80px rgba(255,255,255,0.08),
-    680px 300px rgba(255,255,255,0.11),
-    900px 140px rgba(255,255,255,0.08),
-    -80px 350px rgba(255,255,255,0.10);
+/* Keep the letter readable above the hearts */
+.destination > * {
+  position: relative;
 }
 
